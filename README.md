@@ -112,7 +112,7 @@ This project implements a Medallion Architecture with three layers: Bronze, Silv
 
 - APIs: For fetching NPI and ICD codes.
 
-**Credits**
+### **Credits**
 
 - Sumit Mittal
 
