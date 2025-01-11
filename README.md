@@ -12,7 +12,7 @@ Accounts Payable (AP): Covers the hospital's financial obligations, such as sala
 
 **Project Datasets**
 
-1. **EMR Data (Electronic Medical Record)**
+**1. **EMR Data (Electronic Medical Record)****
 
 Stored in Azure SQL Databases, split across two different accounts for two hospitals (e.g., Apollo and Manipal Hospital).
 
@@ -28,7 +28,7 @@ Department details
 
 Encounters: When a patient visits a hospital for the first time, an encounter is created (e.g., Encounter 1), with multiple transactions associated with it.
 
-2. **Claims Data**
+**2. **Claims Data****
 
 Provided by insurance companies.
 
@@ -36,19 +36,19 @@ Stored in Azure Blob Storage within a container named Landing.
 
 Format: Flat files (CSV).
 
-3. **NPI Data (National Provider Identifier)**
+**3. **NPI Data (National Provider Identifier)****
 
 Unique 10-digit numerical identifier for individual providers (e.g., doctors).
 
 Retrieved via a public API.
 
-4. **ICD Codes (International Classification of Diseases)**
+**4. **ICD Codes (International Classification of Diseases)****
 
 Standardized codes used by healthcare providers to map diagnoses to descriptions.
 
 Retrieved via an API.
 
-5. **CPT Codes (Current Procedural Terminology)**
+**5. **CPT Codes (Current Procedural Terminology)****
 
 Standardized codes that identify medical procedures and services.
 
@@ -58,13 +58,13 @@ Stored in a Data Lake container named Landing.
 
 This project implements a Medallion Architecture with three layers: Bronze, Silver, and Gold.
 
-1. **Bronze Layer:**
+**1. **Bronze Layer:****
 
 Stores raw data in Parquet format.
 
 Serves as the source of truth.
 
-2. **Silver Layer:**
+**2. **Silver Layer:****
 
 Data is cleansed, validated, and transformed.
 
@@ -74,7 +74,7 @@ Slowly Changing Dimensions Type 2 (SCD2) is implemented for dimension tables suc
 
 Stored as Delta tables.
 
-3. **Gold Layer:**
+**3. **Gold Layer:****
 
 Contains aggregated and processed data optimized for analytics.
 
